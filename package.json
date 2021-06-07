@@ -1,18 +1,18 @@
 {
-	"name": "@mauro7x/error_factory",
+	"name": "@seedyfiuba/error_components",
 	"version": "1.0.0",
 	"description": "Seedy FIUBA Error Factory",
 	"main": "index.js",
 	"scripts": {},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/SeedyFiuba-G8/sf_error_factory.git"
+		"url": "git+https://github.com/SeedyFiuba-G8/error_components.git"
 	},
 	"keywords": [],
 	"author": "",
 	"license": "ISC",
 	"bugs": {
-		"url": "https://github.com/SeedyFiuba-G8/sf_error_factory/issues"
+		"url": "https://github.com/SeedyFiuba-G8/error_components/issues"
 	},
-	"homepage": "https://github.com/SeedyFiuba-G8/sf_error_factory#readme"
+	"homepage": "https://github.com/SeedyFiuba-G8/error_components#readme"
 }
