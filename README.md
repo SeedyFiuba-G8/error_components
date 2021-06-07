@@ -1,1 +1,1 @@
-# Seedy FIUBA Error Factory
+# Seedy FIUBA Error Components
