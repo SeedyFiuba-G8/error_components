@@ -1,7 +1,7 @@
 {
 	"name": "@seedyfiuba/error_components",
-	"version": "1.0.0",
-	"description": "Seedy FIUBA Error Factory",
+	"version": "1.0.1",
+	"description": "Seedy FIUBA Error Components",
 	"main": "index.js",
 	"scripts": {},
 	"repository": {
