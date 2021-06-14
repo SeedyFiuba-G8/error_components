@@ -23,6 +23,7 @@ module.exports = function $errors() {
 		// HTTP Errors
 		BadRequest, // 400
 		Unauthorized, // 401
+		Forbidden, // 402
 		NotFound, // 404
 		Conflict, // 409
 		InternalServerError, // 500
@@ -38,6 +39,10 @@ function BadRequest(message) {
 
 function Unauthorized(message) {
 	return new CustomError(401, 'Unauthorized', message);
+}
+
+function Forbidden(message) {
+	return new CustomError(403, 'Forbidden', message);
 }
 
 function NotFound(message) {
