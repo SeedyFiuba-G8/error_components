@@ -16,6 +16,7 @@
 	},
 	"homepage": "https://github.com/SeedyFiuba-G8/error_components#readme",
 	"dependencies": {
-		"http-errors": "^1.8.0"
+		"http-errors": "^1.8.0",
+		"lodash": "^4.17.21"
 	}
 }
