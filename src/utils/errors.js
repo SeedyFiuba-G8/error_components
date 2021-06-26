@@ -1,19 +1,12 @@
+const _ = require('lodash');
 const createHttpError = require('http-errors');
 
 class CustomError extends Error {
-	constructor(
-		status,
-		name,
-		message = undefined,
-		data = undefined,
-		errors = undefined
-	) {
-		super(name);
-		this.status = status;
-		this.name = name;
-		this.message = message;
-		this.data = data;
-		this.errors = errors;
+	constructor(err) {
+		super(_.get(err, 'name', 'Error'));
+		this.status = _.get(err, 'status', 500);
+		this.message = _.get(err, 'message');
+		this.errors = _.get(err, 'errors');
 	}
 }
 
@@ -35,12 +28,6 @@ module.exports = function $errors() {
 };
 
 function FromAxios(axiosErr) {
-	const err = axiosErr.response.data.error;
-	return new CustomError(
-		err.status,
-		err.name,
-		err.message,
-		err.data,
-		err.errors
-	);
+	const err = _.get(axiosErr, 'response.data.error', axiosErr);
+	return new CustomError(err);
 }

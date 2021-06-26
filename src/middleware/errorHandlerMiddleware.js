@@ -13,7 +13,6 @@ module.exports = function $errorHandlerMiddleware(logger = undefined) {
 				status,
 				name: err.name || 'Error',
 				message: err.message,
-				data: err.data,
 				errors: err.errors,
 			},
 			_.isUndefined
