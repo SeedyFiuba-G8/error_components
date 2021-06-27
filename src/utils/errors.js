@@ -3,8 +3,10 @@ const createHttpError = require('http-errors');
 
 class CustomError extends Error {
 	constructor(err) {
-		super(_.get(err, 'name', 'Error'));
+		const name = _.get(err, 'name', 'Error');
+		super(name);
 		this.status = _.get(err, 'status', 500);
+		this.name = name;
 		this.message = _.get(err, 'message');
 		this.errors = _.get(err, 'errors');
 	}
