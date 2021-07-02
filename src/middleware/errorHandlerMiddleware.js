@@ -23,6 +23,6 @@ module.exports = function $errorHandlerMiddleware(logger = undefined) {
 				`Request failed. Sending error: ${JSON.stringify(error)}`
 			);
 
-		res.status(status).json({ error });
+		res.status(status).json(error);
 	};
 };
