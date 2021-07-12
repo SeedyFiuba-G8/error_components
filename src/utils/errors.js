@@ -31,6 +31,11 @@ module.exports = function $errors() {
 };
 
 function FromAxios(axiosErr) {
-	const err = _.get(axiosErr, 'response.data', axiosErr);
+	const status = axiosErr.response.status;
+	const err =
+		status && !(status >= 200 && status < 300)
+			? axiosErr
+			: _.get(axiosErr, 'response.data', axiosErr);
+
 	return new CustomError(err);
 }
