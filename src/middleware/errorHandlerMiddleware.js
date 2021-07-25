@@ -19,9 +19,11 @@ module.exports = function $errorHandlerMiddleware(logger = undefined) {
 		);
 
 		if (logger)
-			logger.error(
-				`Request failed. Sending error: ${JSON.stringify(error)}`
-			);
+			// It would be nice to add some requestId
+			logger.debug({
+				message: 'Request failed',
+				error,
+			});
 
 		res.status(status).json(error);
 	};
